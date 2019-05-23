@@ -26,3 +26,9 @@ Only preserved state of Svelte components is public props. And also events, but 
 This is using some internal API from NativeScript, that they use for their own (core) HMR but are documented as private for the moment.
 
 Also, rapid firing HMR events (i.e. fast ctrl-s in a row) tends to make HMR unstable.
+
+Modals: on HMR, the existing modal is closed and another one is immediately opened with the new content, with a visible transition.
+
+## TODO
+
+- [ ] test modal stack HMR (multiple modals in a frame, with navigation between modal pages)
