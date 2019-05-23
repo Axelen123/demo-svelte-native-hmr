@@ -17,4 +17,12 @@ tns install
 tns run android
 ```
 
-Try HMR!
+Go edit some `.svelte` files!
+
+## Known limitations
+
+Only preserved state of Svelte components is public props. And also events, but this has not been thoroughly tested, so maybe not so much for events.
+
+This is using some internal API from NativeScript, that they use for their own (core) HMR but are documented as private for the moment.
+
+Also, rapid firing HMR events (i.e. fast ctrl-s in a row) tends to make HMR unstable.
