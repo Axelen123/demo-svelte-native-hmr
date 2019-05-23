@@ -16,6 +16,33 @@ const TerserPlugin = require('terser-webpack-plugin')
 const hashSalt = Date.now().toString()
 const svelteNativePreprocessor = require('svelte-native-preprocessor')
 
+const hotOptions = {
+  native: {
+    // Transition that will be used for HMR reloads that implies reloading
+    // a whole page.
+    //
+    // Default is to try its best to not animate and replace in place as
+    // fast as possible. Unfortunately, we're not there yet...
+    //
+    // So, meanwhile, treat yourself a great candy eye to know when your
+    // HMR has been applied!
+    //
+    // Examples:
+    //
+    // ~~~js
+    // transition: false // default behaviour
+    //
+    // transition: 'fade' // shortcut
+    //
+    // transition: { name: 'fade', duration: 333 }
+    // ~~~
+    //
+    // See: https://docs.nativescript.org/ui/ns-ui-widgets/frame
+    // 
+    transition: false,
+  },
+};
+
 module.exports = env => {
   // Add your custom Activities, Services and other Android app components here.
   const appComponents = [
@@ -248,9 +275,7 @@ module.exports = env => {
               options: {
                 preprocess: svelteNativePreprocessor(),
                 hotReload: hmr,
-                hotOptions: {
-                  native: true,
-                },
+                hotOptions,
               },
             },
           ],
