@@ -6,6 +6,8 @@ It relies on forked versions of [svelte-loader](https://github.com/sveltejs/svel
 
 **Disclaimer** I am not affiliated with `svelte-loader` team, so this may be completely different to what will eventually be implemented officially.
 
+**WARNING This has been developed and tested against Android only.** I don't own an iPhone, so I've got no idea how it performs on iOS unfortunately.
+
 ## Get started
 
 ```bash
