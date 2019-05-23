@@ -26,5 +26,8 @@
     "svelte-native-preprocessor": "^0.1.3"
   },
   "gitHead": "c06800e52ee1a184ea2dffd12a6702aaa43be4e3",
-  "readme": "NativeScript Application"
+  "readme": "NativeScript Application",
+  "scripts": {
+    "dev": "nodemon --exec 'tns debug android' -w '../svelte-loader/**/*.js' -w '../svelte-dev-helper/lib/**/*.js'"
+  }
 }
