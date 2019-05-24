@@ -33,4 +33,8 @@ Modals: on HMR, the existing modal is closed and another one is immediately open
 
 ## TODO
 
+- [ ] error management in HMR cycle to achieve better stability (then 1. full reload on save 2. display current error instead of crashing the running app)
+
+- [ ] extract native stuff from svelte-dev-helper into their own native-dedicated package (to prevent webpack from trying to require native things in non-native projects -- for now we're using the `hmr-native` branch or rixo/svelte-dev-helper#hmr-native but that's probably not a perene solution)
+
 - [ ] test modal stack HMR (multiple modals in a frame, with navigation between modal pages)
