@@ -39,6 +39,13 @@ const hotOptions = {
   // See: https://docs.nativescript.org/ui/ns-ui-widgets/frame
   //
   transition: false,
+  
+  // Display compile errors in client app. This saves a full app relaunch,
+  // but it might corrupt app state more often.
+  // 
+  // TODO not supported on native
+  // 
+  optimistic: false,
 };
 
 module.exports = env => {
